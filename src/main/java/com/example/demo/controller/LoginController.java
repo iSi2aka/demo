@@ -22,7 +22,7 @@ public class LoginController {
 	
 	@PostMapping("/login")
 	public String login(Model model, LoginForm form) {
-		var isCorrectUserAuth = form.getLogignId().equals(LOGIN_ID)
+		var isCorrectUserAuth = form.getLoginId().equals(LOGIN_ID)
 			&& form.getPassword().equals(PASSWORD);
 		if(isCorrectUserAuth) {
 			return "redirect:/menu";
